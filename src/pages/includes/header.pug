@@ -1,0 +1,11 @@
+header.header
+    .header__container
+        .header__logo
+            a.headerLogo__link(href="javascript:void(0)"): img(src="/img/logo.png", alt="LoremIpsum.Net", width="246", height="20")
+        nav.header__nav
+            button.headerNav__mobileToggle.js-mobile-toggle
+                i.fa.fa-bars.fa-2x
+            ul.headerNav__links              
+                each link, index in headerLinks
+                    li.headerNav__item(class=link.active ? "headerNav__item--active" : null)
+                        a(href="javascript:void(0)")=link.text

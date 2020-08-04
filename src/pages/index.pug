@@ -1,0 +1,62 @@
+extends common/layout
+
+block head
+    include includes/header.pug
+block content
+    section.display1
+        .display1__container
+            h1.display1__heading
+                span.display1__heading--light Lorem ipsum 
+                | dolor sit amet consectetur 
+                span.display1__heading--light adipiscing
+            p.display1__text At vero eos et accusamus et iusto odio dignissimos ducimus!
+            ul.display1__list
+                li - Totam rem aperiam eaque ipsa        
+                li - Sit voluptatem accusantium doloremque laudantium
+                li - Sed ut perspiciatis, unde omnis iste natus error        
+            a.button.button--primary.display1__button(href="javascript:void(0)") Заказать
+            a.button.button--default.display1__button(href="javascript:void(0)") Подробнее
+    section.ordering
+        .ordering__container
+            h2.ordering__heading Оформление 
+                span.ordering__heading--light Заказа
+            p.ordering__description Перед заполнением формы ознакомьтесь с нашей схемой работы!
+            .ordering__list
+                each val, index in orderingSteps
+                    .orderingList__step
+                        .orderingList__circle
+                            i(class=val.class, aria-hidden="true")
+                        span.orderingList__text= val.text
+                    if val.dots
+                        .orderingList__dots
+                            - var n = 0;
+                            while n < 5
+                                span= n++
+            form(action="").ordering__form
+                .row
+                    .col-12.col-4-l                    
+                        select.customSelect(name="salutation" placeholder="dsf")
+                            option(disabled selected hidden) Выберите тип системы
+                            each item, index in options
+                               option(value=index)=item
+                    .col-12.col-4-l
+                        input(type="email" placeholder="Ваш e-mail").form-control
+                    .col-12.col-4-l
+                        input(type="text" placeholder="Ваше имя").form-control
+                    .col-12.col-8-l
+                        .uiSlider
+                            .uiSlider__top
+                                p.uiSlider__text Sed ut perspiciatis, unde omnis iste natus
+                                .uiSlider__percent 75%
+                            .uiSlider__bar
+                    .col-12.col-4-l                        
+                        button.button.button--default.button--l.js-file(data-target="ordering__file")
+                            span
+                                i.button__icon--left.fa.fa-file-text-o.fa-lg(aria-hidden="true")
+                                | Прикрепить файл
+                        input.ordering__file(name="myFile" type="file")
+                    .col-12.col-4-l
+                    .col-12.col-4-l
+                        button.button.button--primary.button--l.ordering__sendButton Отправить
+block foot
+    include includes/footer.pug

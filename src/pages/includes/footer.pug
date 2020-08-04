@@ -1,0 +1,18 @@
+footer.footer
+    .container.footer__container
+        p.footer__copyright=copy
+        nav.footer__navigation
+            ul.list.list--inline.footer__list
+                each link, index in footerLinks
+                    li.list__item.footerList__item
+                        a.footer__link(href="javascript:void(0)")
+                            img(src=link.img)
+                            span=link.text
+            ul.list.list--inline.footer__list
+                each link, index in footerSocial
+                    li.list__item.footerList__item
+                        a.footer__link--social(href="javascript:void(0)")
+                            img(src=link.img)
+                            span=link.text
+                
+                

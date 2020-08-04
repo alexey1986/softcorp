@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+
+.idea
+*.sublime*
+.vscode
+.history
+
+*.log*
+node_modules/
+
+# build/
