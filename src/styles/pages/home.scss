@@ -1,5 +1,5 @@
 .display1 {
-    background: url("/img/bg.jpg") no-repeat center center;
+    background: url("../img/bg.jpg") no-repeat center center;
     background-size: cover;
     padding-top: 99px;
 
@@ -75,7 +75,7 @@
 }
 
 .ordering {
-    background: $primaryDark url("/img/map.jpg") no-repeat top center;
+    background: $primaryDark url("../img/map.jpg") no-repeat top center;
     background-size: auto;
     color: $white;
     padding: 50px 0;

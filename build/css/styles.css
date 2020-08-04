@@ -1168,7 +1168,7 @@ h6, .h6 {
         color: #bbbbbb; }
 
 .display1 {
-  background: url("/img/bg.jpg") no-repeat center center;
+  background: url("../img/bg.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 99px; }
   .display1__container {
@@ -1222,7 +1222,7 @@ h6, .h6 {
       margin-left: 27px; } }
 
 .ordering {
-  background: #272733 url("/img/map.jpg") no-repeat top center;
+  background: #272733 url("../img/map.jpg") no-repeat top center;
   background-size: auto;
   color: #ffffff;
   padding: 50px 0; }
