@@ -20,7 +20,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
